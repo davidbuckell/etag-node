@@ -2,6 +2,7 @@
 
 ETAG_HEADER="$1"
 URL="http://localhost:3000/items/1"
+#URL="https://etag-node-d8amhjang3cycrcu.uksouth-01.azurewebsites.net/items/1"
 
 while true; do
   RESPONSE=$(curl -s -i -H "If-None-Match: \"$ETAG_HEADER\"" "$URL")
